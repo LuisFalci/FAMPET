@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <nav>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
+    <nav className={styles.navbar}>
+      <NavLink to="/">Home</NavLink>
+      <ul className={styles.links_list}>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+      </ul>
     </nav>
   );
 }
